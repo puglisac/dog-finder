@@ -6,7 +6,7 @@ return (
         {dogs.map(dog => (
         <div key={dog.name}>
            <h2>{dog.name}</h2>
-           <img style={{width: "100px"}}src={`/img/${dog.src}.jpg`}></img>
+           <img style={{width: "100px"}}src={`/img/${dog.src}.jpg`} alt={dog.name}></img>
            <p>Age: {dog.age}</p>
         </div>
         ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {Redirect, useParams} from 'react-router-dom';
 
 const DogDetails = ({dogs})=>{
     const {name} = useParams()
@@ -7,11 +7,14 @@ const DogDetails = ({dogs})=>{
         return dogs.find(dog=>dog.name===name);
       }
     const dog = findDog(name)
+    if(!dog) {
+        return <Redirect to="/dogs"/>}
     return(
+        
         <div className="DogDetails">
         <div key={dog.name}>
            <h2>{dog.name}</h2>
-           <img src={`/img/${dog.src}.jpg`}></img>
+           <img src={`/img/${dog.src}.jpg`} alt={dog.name}></img>
            
             <h3>About {dog.name}</h3>
             <p>Age: {dog.age}</p>
