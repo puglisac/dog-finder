@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Dog Finder
+This app was written to practice client-side routing with react using Switch and Redirect.
+
 ## Available Scripts
 
 In the project directory, you can run:
